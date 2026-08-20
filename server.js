@@ -83,7 +83,7 @@ const server = http.createServer(app);
 
 // socket.io
 export const io = new Server(server, {
-  cors: { origin: "*" },
+  cors: { origin: ["https://fe-ta-xi.vercel.app", "http://localhost:3000"] },
 });
 
 // middleware (Izinkan CORS lokal dan Vercel)
