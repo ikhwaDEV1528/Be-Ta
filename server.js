@@ -177,7 +177,10 @@ app.use('/SERVER_TEST' , ROUTE_TEST)
 
 
 // ************ RUN SERVER DENGAN SOCKET.IO ************
-
+// 1. Tambahkan route utama agar URL Vercel tidak 404 saat dibuka
+app.get("/", (req, res) => {
+  res.send("Backend API Skripsi Running Successfully! 🚀");
+});
 
 
 const PORT = 5000;
