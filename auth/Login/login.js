@@ -38,7 +38,8 @@ function handleValidationErrors(req, res) {
 }
 
 
-router.login('/login', (req,res)=> {
+router.post('/login', (req,res)=> {
+
   res.status(200).json({message:'KENA BACKEND'})
 })
 
