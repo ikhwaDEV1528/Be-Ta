@@ -37,11 +37,18 @@ function handleValidationErrors(req, res) {
   return null;
 }
 
+router.post('/login', (req, res) => {
+  const { username } = req.body;
 
-router.post('/login', (req,res)=> {
-
-  res.status(200).json({message:'KENA BACKEND'})
-})
+  // Kirim data dummy lengkap agar Frontend tidak crash
+  res.status(200).json({
+    message: 'KENA BACKEND',
+    navigasi: '/dashboard', 
+    user: { 
+      username: username || 'User Demo' 
+    }
+  });
+});
 
 // router.post("/login",loginLimiter,[body('username').isString().trim().isLength({ min: 1, max: 50 }),body('password').isString().isLength({ min: 1, max: 200 })],async (req, res) => {
 //   console.log('Masuk ke login end')
