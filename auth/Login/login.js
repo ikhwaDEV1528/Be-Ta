@@ -39,7 +39,7 @@ function handleValidationErrors(req, res) {
 
 
 router.login('/login', (req,res)=> {
-  res.json({message:'KENA BACKEND'})
+  res.status(200).json({message:'KENA BACKEND'})
 })
 
 // router.post("/login",loginLimiter,[body('username').isString().trim().isLength({ min: 1, max: 50 }),body('password').isString().isLength({ min: 1, max: 200 })],async (req, res) => {
